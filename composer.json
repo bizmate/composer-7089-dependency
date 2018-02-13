@@ -1,5 +1,5 @@
 {
-    "name": "myreviews/reviews",
+    "name": "bizmate/composer-7089-dependency",
     "type": "symfony-bundle",
     "license": "proprietary",
     "require": {

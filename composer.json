@@ -1,0 +1,81 @@
+{
+    "name": "myreviews/reviews",
+    "type": "symfony-bundle",
+    "license": "proprietary",
+    "require": {
+        "php": "^7.1.3",
+        "ext-iconv": "*",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/console": "^4.0",
+        "symfony/flex": "^1.0",
+        "symfony/framework-bundle": "^4.0",
+        "symfony/lts": "^4@dev",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/orm-pack": "^1.0",
+        "symfony/swiftmailer-bundle": "^3.1",
+        "symfony/yaml": "^4.0"
+    },
+    "require-dev": {
+        "behat/behat": "^3.3",
+        "behat/common-contexts": "^1.2@dev",
+        "behat/debug-extension": "^1.0",
+        "behat/mink-browserkit-driver": "^1.3",
+        "behat/mink-extension": "^2.2",
+        "behat/symfony2-extension": "^2.1",
+        "jarnaiz/behat-junit-formatter": "^1.3",
+        "mockery/mockery": "^0.9.9",
+        "pdepend/pdepend": "^2.5",
+        "phpmd/phpmd": "^2.6",
+        "phpmetrics/phpmetrics": "^2.2",
+        "sebastian/phpcpd": "^3.0",
+        "sensiolabs/security-checker": "^4.0",
+        "squizlabs/php_codesniffer": "^3.0",
+        "symfony/dotenv": "^4.0",
+        "symfony/phpunit-bridge": "^4.0"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "MyReviews\\ReviewsBundle\\": "src/",
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "security-checker security:check": "script"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "id": "01C4ZS37WH8SRYKJ62FM09J9QA",
+            "allow-contrib": false
+        }
+    }
+}
